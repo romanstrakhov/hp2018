@@ -1,0 +1,61 @@
+/* Extra small devices (phones, less than 768px) */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+
+
+@media (max-width: $screen-xs-max) {
+  
+  nav {
+
+    #logo {
+      padding-bottom:10px;
+    }
+    
+    #menu {
+      text-align: left;
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+  }
+  
+  .footer {
+
+    &_copyright {
+      text-align: left;
+    }
+
+    &_menu {
+      text-align: left;
+    }
+
+    &_social {
+      text-align: right;
+      i {
+        display:block;
+        &:after {
+          content: '';
+        }
+      }
+    }
+
+  }
+
+
+
+}
+
+// @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+
+
+// }
+
+// @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+
+// }
+
+// @media (min-width: $screen-lg-min) {
+
+
+// }
+

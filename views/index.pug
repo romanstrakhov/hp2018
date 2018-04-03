@@ -1,0 +1,83 @@
+-
+  var name = 'Roman Strakhov';
+  var title = name;
+  var about = 'Инженер и&nbsp;графический дизайнер.<br/>Придумываю айдентику, создаю и&nbsp;веду веб-проекты.';
+  var portfolio = [
+  ['АО «Газпром космические системы»','001','gascom','Работаю в аппарате генерального конструктора с 2011 года'],
+  ['АмпирЪ','001','ampeer','Айдентика производителя сварочного оборудования'],
+  ['Title2','002','','note2'],
+  ['Title3','003','','note3'],
+  ['RUSDOC','004','rusdoc','Айдентика бюро технических переводов'],
+  ['Techtrans Russia','005','techtrans','Айдентика и сайт бюро технических переводов'],
+  ['Title2','006','','note2'],
+  ['Title3','007','','note3'],
+  ['Title2','008','','note2'],
+  ['Techtrans24','009','techtrans24.com','Айдентика и сайт бюро технических переводов'],
+    
+  ];
+-
+doctype html
+html(lang='ru')
+  head
+    title=title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css')
+    link(rel='stylesheet prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/main.css')
+  body
+    header 
+      nav
+        div.container
+          div.row
+            div#logo.col-xs-12.col-sm-6.col-md-4
+              h1!=name
+              p!=about
+            div#menu.col-xs-12.col-sm-6.col-md-8
+              ul
+                li 
+                  a(href="cv")
+                    strong CV
+                li О себе
+                li Работы
+                li Контакты
+    //- section#intro
+    //-   div.container
+    //-     div.row
+    section.gallery
+      .container-fluid
+        .row#sg-row
+          each item in portfolio
+            .gallery_project.col-xs-12.col-sm-6.col-md-4.col-lg-3
+              .gallery_project_cover(style="background-image:url\('https://strakhov.ru/files/projects/portfolio/pfolio."+item[1]+".jpeg'\)")
+              if (item[2]!=='')
+                a(href=item[2])
+                  .gallery_project_description.hidden
+                    h1= item[0]
+                    p= item[3]
+              else
+                .gallery_project_description.hidden
+                  h1= item[0]
+                  p= item[3]
+
+    section
+
+    footer.footer
+      .container
+        .row
+          .col-xs-8.col-sm-4.footer_copyright!='&copy; 2018&nbsp;'+name
+          .col-xs-8.col-sm-4.footer_menu
+            ul
+              li 
+                a(href='/') О себе
+              li 
+                a(href='/') Работы
+              li 
+                a(href='/') Контакты
+          .col-xs-4.col-sm-4.footer_social
+            i facebook
+            i twitter
+            i github
+            i instagram
+            
+    script(src='js/main.js')

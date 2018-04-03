@@ -7,7 +7,7 @@
 // @import 'vendors/jquery-ui';
 
 // @import 'base/reset';
-// @import 'base/typography';
+@import 'base/typography';
 
 // @import 'layout/navigation';
 // @import 'layout/grid';
@@ -27,3 +27,5 @@
 
 // @import 'themes/theme';
 // @import 'themes/admin';
+
+@import 'media/xs'
