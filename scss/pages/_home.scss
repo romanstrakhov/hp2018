@@ -85,15 +85,16 @@ section#intro {
   }
 
   &_menu {
+    text-align:center;
     ul {
       list-style: none;
       margin-bottom: 0;
       li {
         display: inline;
         margin-left:20px;
-      }
-      li:first-child {
-        margin-left:0;
+        &:first-child {
+          margin-left:0;
+        }
       }
     }
   }

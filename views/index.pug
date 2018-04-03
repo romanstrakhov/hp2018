@@ -1,7 +1,7 @@
 -
-  var name = 'Roman Strakhov';
+  var name = 'Роман Страхов';
   var title = name;
-  var about = 'Инженер и&nbsp;графический дизайнер.<br/>Придумываю айдентику, создаю и&nbsp;веду веб-проекты.';
+  var about = 'Придумываю айдентику, создаю и&nbsp;веду веб-проекты.';
   var portfolio = [
   ['АО «Газпром космические системы»','001','gascom','Работаю в аппарате генерального конструктора с 2011 года'],
   ['АмпирЪ','001','ampeer','Айдентика производителя сварочного оборудования'],
@@ -35,9 +35,7 @@ html(lang='ru')
               p!=about
             div#menu.col-xs-12.col-sm-6.col-md-8
               ul
-                li 
-                  a(href="cv")
-                    strong CV
+                li #[a(href='cv') #[strong #[abbr(title='Curriculum vitae = Резюме') CV]]]
                 li О себе
                 li Работы
                 li Контакты
@@ -53,12 +51,12 @@ html(lang='ru')
               if (item[2]!=='')
                 a(href=item[2])
                   .gallery_project_description.hidden
-                    h1= item[0]
-                    p= item[3]
+                    h1!=item[0]
+                    p!=item[3]
               else
                 .gallery_project_description.hidden
-                  h1= item[0]
-                  p= item[3]
+                  h1!=item[0]
+                  p!=item[3]
 
     section
 
