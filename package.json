@@ -19,6 +19,9 @@
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-changed": "^3.2.0",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-pug": "^3.3.0",
     "gulp-pug-beautify": "0.0.1",
     "gulp-sass": "^3.2.1",

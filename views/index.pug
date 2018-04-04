@@ -1,20 +1,16 @@
 -
   var name = 'Роман Страхов';
   var title = name;
-  var about = 'Придумываю айдентику, создаю и&nbsp;веду веб-проекты.';
+  var about = 'Графический дизайнер, разработчик сайтов.';
+  var portfolioPrefix = 'images/portfolio/pfolio.';
+  var portfolioSuffix = '.jpeg';
   var portfolio = [
-  ['АО «Газпром космические системы»','001','gascom','Работаю в аппарате генерального конструктора с 2011 года'],
+  ['АО «Газпром космические системы»','gss01','gascom','Работаю в аппарате генерального конструктора с&nbsp;2011&nbsp;года'],
   ['АмпирЪ','001','ampeer','Айдентика производителя сварочного оборудования'],
-  ['Title2','002','','note2'],
-  ['Title3','003','','note3'],
   ['RUSDOC','004','rusdoc','Айдентика бюро технических переводов'],
   ['Techtrans Russia','005','techtrans','Айдентика и сайт бюро технических переводов'],
-  ['Title2','006','','note2'],
-  ['Title3','007','','note3'],
-  ['Title2','008','','note2'],
   ['Techtrans24','009','techtrans24.com','Айдентика и сайт бюро технических переводов'],
-  ['Techtrans24','009','techtrans24.com','Айдентика и сайт бюро технических переводов'],
-    
+      
   ];
 -
 doctype html
@@ -36,9 +32,11 @@ html(lang='ru')
               p!=about
             div#menu.col-xs-12.col-sm-6.col-md-8
               ul
-                li #[a(href='cv') #[strong #[abbr(title='Curriculum vitae = Резюме') CV]]]
-                li О себе
-                li Работы
+                li 
+                  a(href='cv') #[strong CV]
+                // li #[a(href='cv') #[strong #[abbr(title='Curriculum vitae = Резюме') CV]]]
+                // li О себе
+                li Блог
                 li Контакты
     //- section#intro
     //-   div.container
@@ -48,13 +46,14 @@ html(lang='ru')
         .row#sg-row
           each item in portfolio
             .gallery_project.col-xs-12.col-sm-6.col-md-4.col-lg-3
-              .gallery_project_cover(style="background-image:url\('https://strakhov.ru/files/projects/portfolio/pfolio."+item[1]+".jpeg'\)")
               if (item[2]!=='')
                 a(href=item[2])
+                  .gallery_project_cover(style="background-image:url\('" + portfolioPrefix+item[1] + portfolioSuffix + "'\)")
                   .gallery_project_description.hidden
                     h1!=item[0]
                     p!=item[3]
               else
+                .gallery_project_cover(style="background-image:url\('" + portfolioPrefix+item[1] + portfolioSuffix + "'\)")
                 .gallery_project_description.hidden
                   h1!=item[0]
                   p!=item[3]

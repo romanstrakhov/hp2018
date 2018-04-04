@@ -1,5 +1,8 @@
 var gulp = require('gulp');
 var watch = require('gulp-watch');
+var changed = require('gulp-changed');
+var imageMin = require('gulp-imagemin');
+var imageResize = require('gulp-image-resize');
 
 var wait = require('gulp-wait');
 var waitD1 = 5000;
@@ -16,6 +19,15 @@ gulp.task( 'watch', function() {
     gulp.watch( 'views/**/*.pug', ['views'] );
     gulp.watch( 'js/**/*.js', ['scripts'] );
 //         console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+} );
+
+
+gulp.task( 'img-portfolio', function() {
+  return gulp.src('images/portfolio/*.jpeg')
+  .pipe( imageResize({ width:700 }) )
+  .pipe( imageMin() )
+  .pipe( gulp.dest( distPath + '/images/portfolio' ));
+  
 } );
 
 gulp.task( 'styles', function buildSCSS() {
