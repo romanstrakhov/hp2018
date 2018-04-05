@@ -1,7 +1,8 @@
 .gallery {
   
-  .row > :nth-child(2n) { background-color: $color_fill1; } 
-  .row > :nth-child(2n+1) { background-color: $color_fill2; } 
+  // .row > :nth-child(2n) { background-color: $color_fill1; } 
+  // .row > :nth-child(2n+1) { background-color: $color_fill2; } 
+  
   // .row > :nth-child(3n+2) { background-color: $color_fill3; } 
 
   &_project {
@@ -23,6 +24,7 @@
       top:0;
       left:0;
       transition: all ease-in-out .2s;
+      // margin:5px;
     }
     
     &_cover {
@@ -49,14 +51,7 @@
         visibility: hidden;
         opacity: 0;
       }
-            
-      a {
-        > {
-                    
-          
-        }
-      }
-      
+                  
       h1 {
         font-size:150%;
         font-weight:bold;

@@ -16,7 +16,9 @@
     "url": "https://github.com/romanstrakhov/hp2018/issues"
   },
   "homepage": "https://github.com/romanstrakhov/hp2018#readme",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-connect": "^5.5.0"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-changed": "^3.2.0",
