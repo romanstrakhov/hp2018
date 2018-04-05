@@ -24,27 +24,33 @@
       top:0;
       left:0;
       transition: all ease-in-out .2s;
-      // margin:5px;
+      // margin: 5px;
     }
     
     &_cover {
       background-position:center;
       background-size:cover;
-      // transition: blur 5s ease-in-out;
+      // filter: saturate(0);
+      // transition: blur ease-in-out 5s;
 
       &.fx {
+        // filter: saturate(100%);
         filter: blur(10px);
         transform: scale(1.2);
-        // filter: saturate(100%);
         }
     }
     
     &_description {
       padding: 2em 4em;
       text-align: left;
-      background-color: rgba(0, 0, 0, 0.2);
+
+      background-color: rgba(0, 0, 0, 0.25);
       color: white;
       text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+
+      // background-color: rgba(255, 255, 255, 0.5);
+      // color: #333;      
+
       transition: visibility 3s, opacity 3s linear;
       
       &.hidden {
